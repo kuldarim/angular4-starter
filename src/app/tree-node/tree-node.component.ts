@@ -1,11 +1,11 @@
-import { Component, Input } from '@angular/core'
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'tree-node',
+  selector: 'my-tree-node',
   templateUrl: './tree-node.component.html',
   styleUrls: ['./tree-node.component.scss']
 })
-export class TreeNode {
+export class TreeNodeComponent {
   @Input() node;
 
   add(params) {

@@ -1,4 +1,4 @@
-import { TreeNode } from './tree-node/tree-node.component';
+import { TreeNodeComponent } from './tree-node/tree-node.component';
 import { NgModule, ApplicationRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
@@ -7,7 +7,6 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { RecursiveComponent } from './recursive/recursive.component';
 import { IterativeComponent } from './iterative/iterative.component';
-import { ApiService } from './shared';
 import { routing } from './app.routing';
 
 
@@ -24,10 +23,7 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     AppComponent,
     RecursiveComponent,
     IterativeComponent,
-    TreeNode
-  ],
-  providers: [
-    ApiService
+    TreeNodeComponent
   ],
   bootstrap: [AppComponent]
 })

@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'my-home',
   templateUrl: './recursive.component.html',
   styleUrls: ['./recursive.component.scss']
 })
-export class RecursiveComponent implements OnInit {
+export class RecursiveComponent {
 
   node = {name: 'root', children: [
     {name: 'a', children: []},
@@ -16,13 +16,5 @@ export class RecursiveComponent implements OnInit {
       {name: 'f', children: []},
      ]},
   ]};
-
-  constructor() {
-    // Do stuff
-  }
-
-  ngOnInit() {
-    console.log('Hello Home');
-  }
 
 }
