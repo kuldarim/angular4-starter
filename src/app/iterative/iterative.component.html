@@ -2,5 +2,5 @@
 <div *ngFor="let node of nodes; let i = index">
   <span>{{node.name}}</span>
   <span>{{node.depth}}</span>
-  <button (click)="add(i)">add</button>
+  <button (click)="this.iterativeService.add(i)">add</button>
 </div>

@@ -1,39 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { IterativeService, INode } from './iterative.service';
 
 @Component({
   selector: 'my-about',
   templateUrl: './iterative.component.html',
-  styleUrls: ['./iterative.component.scss']
+  styleUrls: ['./iterative.component.scss'],
+  providers: [IterativeService]
 })
-export class IterativeComponent implements OnInit {
+export class IterativeComponent {
+  nodes: Array<INode> = [];
 
-  nodes = [{
-    name: 'a',
-    depth: '1',
-  }, {
-    name: 'b',
-    depth: '1|1'
-  }, {
-    name: 'c',
-    depth: '1'
-  }, {
-    name: 'c',
-    depth: '1|1'
-  }];
-
-  constructor() {
-    // Do stuff
+  constructor(private iterativeService: IterativeService) {
+    this.nodes = this.iterativeService.nodes;
   }
-
-  ngOnInit() {
-    console.log('Hello About');
-  }
-
-  add(index) {
-    const parent = this.nodes[index];
-    if(parent) {
-      this.nodes.splice(index + 1, 0, {name:'new', depth:`${parent.depth}|1`});
-    }
-  }
-
 }
