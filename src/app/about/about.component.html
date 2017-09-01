@@ -1,10 +1,5 @@
-<!-- <ul> -->
   <div *ngFor="let node of nodes; let i = index">
     <span>{{node.name}}</span>
     <span>{{node.depth}}</span>
     <button (click)="add(i)">add</button>
-    <!-- <tree-node  [node]="node"></tree-node> -->
-    <!-- <button (click)="add(node)"> add nodes</button> -->
-    <!-- <button *ngIf="node.children.length" (click)="delete(node)">delete nodes</button> -->
   </div>
-<!-- </ul> -->
