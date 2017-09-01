@@ -5,7 +5,7 @@ import { IterativeComponent } from './iterative/iterative.component';
 
 const routes: Routes = [
   { path: '', component: RecursiveComponent },
-  { path: 'about', component: IterativeComponent}
+  { path: 'iterative', component: IterativeComponent}
 ];
 
 export const routing = RouterModule.forRoot(routes);
