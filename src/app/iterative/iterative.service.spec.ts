@@ -9,7 +9,7 @@ describe('Iterative Service', () => {
 
   it('should return nodes', inject([IterativeService], (service) => {
     const nodes = [{
-      name: 'a',
+      name: 'root',
       depth: '1',
     }, {
       name: 'b',
