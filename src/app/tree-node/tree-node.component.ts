@@ -14,4 +14,20 @@ export class TreeNodeComponent {
   constructor(public treeNodeService: TreeNodeService) {
 
   }
+
+  add(node) {
+    try {
+      this.treeNodeService.add(node);
+    } catch (ex) {
+      console.log(ex);
+    }
+  }
+
+  delete(node) {
+    try {
+      this.treeNodeService.delete(node);
+    } catch (ex) {
+      console.log(ex);
+    }
+  }
 }

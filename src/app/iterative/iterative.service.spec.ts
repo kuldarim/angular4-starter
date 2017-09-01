@@ -2,7 +2,7 @@ import { inject, TestBed } from '@angular/core/testing';
 
 import { IterativeService } from './iterative.service';
 
-fdescribe('Iterative Service', () => {
+describe('Iterative Service', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({providers: [IterativeService]});
   });
