@@ -1,9 +1,9 @@
 <div class="container">
-    <div>{{node.name}}</div>
+    {{node.name}}
+    <button (click)="add(node)"> add nodes</button>
+    <button *ngIf="node.children.length" (click)="delete(node)">delete nodes</button>
     <ul>
       <li *ngFor="let node of node.children">
-        <button (click)="add(node)"> add nodes</button>
-        <button *ngIf="node.children.length" (click)="delete(node)">delete nodes</button>
         <my-tree-node  [node]="node"></my-tree-node>
       </li>
     </ul>
