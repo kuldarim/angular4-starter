@@ -30,6 +30,9 @@ export class IterativeService {
   }
 
   add(index: number) {
+    if (index > this.nodes.length || index < 0){
+      throw (new Error(`${index} is out of bounds`));
+    }
     const parent = this.nodes[index];
     if(parent) {
       this._nodes.splice(index + 1, 0, {name:'new', depth:`${parent.depth}|1`});
