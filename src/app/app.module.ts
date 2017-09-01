@@ -1,3 +1,4 @@
+import { TreeNode } from './tree-node/tree-node.component';
 import { NgModule, ApplicationRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
@@ -8,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ApiService } from './shared';
 import { routing } from './app.routing';
+
 
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 
@@ -21,7 +23,8 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    TreeNode
   ],
   providers: [
     ApiService
