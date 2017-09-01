@@ -7,10 +7,10 @@ describe('About Component', () => {
     TestBed.configureTestingModule({declarations: [IterativeComponent]});
   });
 
-  it('should ...', () => {
+  it('should contain title', () => {
     const fixture = TestBed.createComponent(IterativeComponent);
     fixture.detectChanges();
-    expect(fixture.nativeElement.children[0].textContent).toContain('About Works!');
+    expect(fixture.nativeElement.children[0].textContent).toContain('Iterative tree');
   });
 
 });
