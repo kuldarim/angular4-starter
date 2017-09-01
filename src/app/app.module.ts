@@ -5,8 +5,8 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
+import { RecursiveComponent } from './recursive/recursive.component';
+import { IterativeComponent } from './iterative/iterative.component';
 import { ApiService } from './shared';
 import { routing } from './app.routing';
 
@@ -22,8 +22,8 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
   ],
   declarations: [
     AppComponent,
-    HomeComponent,
-    AboutComponent,
+    RecursiveComponent,
+    IterativeComponent,
     TreeNode
   ],
   providers: [

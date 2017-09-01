@@ -1,14 +1,14 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AboutComponent } from './about.component';
+import { IterativeComponent } from './iterative.component';
 
 describe('About Component', () => {
   beforeEach(() => {
-    TestBed.configureTestingModule({declarations: [AboutComponent]});
+    TestBed.configureTestingModule({declarations: [IterativeComponent]});
   });
 
   it('should ...', () => {
-    const fixture = TestBed.createComponent(AboutComponent);
+    const fixture = TestBed.createComponent(IterativeComponent);
     fixture.detectChanges();
     expect(fixture.nativeElement.children[0].textContent).toContain('About Works!');
   });

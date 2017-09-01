@@ -3,13 +3,13 @@ import { Component } from '@angular/core';
 
 import { TestBed } from '@angular/core/testing';
 
-import { HomeComponent } from './home.component';
+import { RecursiveComponent } from './recursive.component';
 
 describe('Home Component', () => {
   const html = '<my-home></my-home>';
 
   beforeEach(() => {
-    TestBed.configureTestingModule({declarations: [HomeComponent, TestComponent]});
+    TestBed.configureTestingModule({declarations: [RecursiveComponent, TestComponent]});
     TestBed.overrideComponent(TestComponent, { set: { template: html }});
   });
 
