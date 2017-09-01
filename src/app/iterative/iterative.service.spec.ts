@@ -2,7 +2,7 @@ import { inject, TestBed } from '@angular/core/testing';
 
 import { IterativeService } from './iterative.service';
 
-fdescribe('Api Service', () => {
+fdescribe('Iterative Service', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({providers: [IterativeService]});
   });
@@ -35,13 +35,13 @@ fdescribe('Api Service', () => {
   it('should throw exception if index less then 0', inject([IterativeService], (service) => {
     const index = -1;
 
-    expect(() => { service.add(index) }).toThrow(new Error(`${index} is out of bounds`));
+    expect(() => service.add(index)).toThrow(new Error(`${index} is out of bounds`));
   }));
 
   it('should throw exception if index greater then nodes count', inject([IterativeService], (service) => {
     const index = service.nodes.length + 1;
 
-    expect(() => { service.add(index) }).toThrow(new Error(`${index} is out of bounds`));
+    expect(() => service.add(index)).toThrow(new Error(`${index} is out of bounds`));
   }));
 
 });

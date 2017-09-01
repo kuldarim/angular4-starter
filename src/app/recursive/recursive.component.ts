@@ -1,20 +1,16 @@
 import { Component } from '@angular/core';
+import { INode, RecursiveService } from './recursive.service';
 
 @Component({
   selector: 'my-home',
   templateUrl: './recursive.component.html',
-  styleUrls: ['./recursive.component.scss']
+  styleUrls: ['./recursive.component.scss'],
+  providers: [RecursiveService]
 })
 export class RecursiveComponent {
+  node: INode = {name: 'initial', children: []};
 
-  node = {name: 'root', children: [
-    {name: 'a', children: []},
-    {name: 'b', children: []},
-    {name: 'c', children: [
-      {name: 'd', children: []},
-      {name: 'e', children: []},
-      {name: 'f', children: []},
-     ]},
-  ]};
-
+  constructor(private recursiveService: RecursiveService) {
+    this.node = this.recursiveService.node;
+  }
 }
